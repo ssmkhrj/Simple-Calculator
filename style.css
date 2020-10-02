@@ -114,18 +114,26 @@ i {
   font-size: 1.3rem;
 }
 
+.display,
+.output {
+  scrollbar-color: #333333 black;
+  scrollbar-width: thin;
+}
+
 .display::-webkit-scrollbar,
 .output::-webkit-scrollbar {
   width: 19.2rem;
   height: 0.2rem;
 }
-::-webkit-scrollbar-track {
+.display::-webkit-scrollbar-track,
+.output::-webkit-scrollbar-track {
   background: black;
 }
-::-webkit-scrollbar-thumb {
+.display::-webkit-scrollbar-thumb,
+.output::-webkit-scrollbar-thumb {
   background: #333333;
 }
-::-webkit-scrollbar-thumb:hover {
+.display::-webkit-scrollbar-thumb:hover,
+.output::-webkit-scrollbar-thumb:hover {
   background: #a6a6a6;
-  cursor: pointer;
 }
