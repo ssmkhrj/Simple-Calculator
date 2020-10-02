@@ -10,6 +10,7 @@ let dot = document.querySelector(".dot");
 
 let display = document.querySelector(".display");
 let output = document.querySelector(".output");
+let buttons = document.querySelectorAll("[data-type='btn']");
 
 let equaltoPressed = false;
 
@@ -162,3 +163,13 @@ document.querySelectorAll(".row div").forEach((el) => {
   });
 });
 // VIMP: In addEventListener you cannot use an arrow function because then the "this" keyword won't work as expected.
+
+buttons.forEach((btn) => {
+  btn.addEventListener("click", (el) => {
+    display.scrollTo({
+      top: 0,
+      left: display.scrollWidth,
+      behavior: "auto",
+    });
+  });
+});
